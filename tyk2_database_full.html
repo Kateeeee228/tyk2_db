@@ -1,0 +1,961 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ген TYK2 и мужское бесплодие</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #2a4d69; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 40px; font-size: 14px; }
+        th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h1>Ген TYK2 и его связь с мужским бесплодием</h1>
+<p>Данная страница служит базой данных по гену <strong>TYK2</strong>, ассоциированному с мужским бесплодием. Здесь представлены данные о вариантах гена, уровне его экспрессии в тканях, а также взаимодействующих микроРНК.</p>
+<p><strong>Автор страницы:</strong> Дьяченко Екатерина Александровна, студент 4 курса направления «Прикладная математика и информатика. Биоинформатика».</p>
+
+<h2>1. Варианты TYK2 и их частоты</h2>
+<p>Данная таблица содержит информацию о генетических вариантах TYK2, включая их частоту среди здоровых и больных пациентов.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>VariantID</th>
+      <th>Gene</th>
+      <th>Effect</th>
+      <th>Num of observations healthy</th>
+      <th>Num of observations diseased</th>
+      <th>Num of homozygotes healthy</th>
+      <th>Num of homozygotes diseased</th>
+      <th>Option frequency healthy</th>
+      <th>Option frequency diseased</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>19-10353864-C-T</td>
+      <td>TYK2</td>
+      <td>non_coding_transcript_exon_variant</td>
+      <td>35.0</td>
+      <td>121.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.014996</td>
+      <td>0.018195</td>
+    </tr>
+    <tr>
+      <td>19-10353998-A-G</td>
+      <td>TYK2</td>
+      <td>non_coding_transcript_exon_variant</td>
+      <td>226.0</td>
+      <td>665.0</td>
+      <td>6.0</td>
+      <td>29.0</td>
+      <td>0.068526</td>
+      <td>0.072095</td>
+    </tr>
+    <tr>
+      <td>19-10354011-A-G</td>
+      <td>TYK2</td>
+      <td>non_coding_transcript_exon_variant</td>
+      <td>1682.0</td>
+      <td>4613.0</td>
+      <td>425.0</td>
+      <td>1130.0</td>
+      <td>0.503895</td>
+      <td>0.487117</td>
+    </tr>
+    <tr>
+      <td>19-10356889-C-T</td>
+      <td>TYK2</td>
+      <td>non_coding_transcript_exon_variant</td>
+      <td>180.0</td>
+      <td>387.0</td>
+      <td>13.0</td>
+      <td>22.0</td>
+      <td>0.160714</td>
+      <td>0.150818</td>
+    </tr>
+    <tr>
+      <td>19-10357421-T-C</td>
+      <td>TYK2</td>
+      <td>non_coding_transcript_exon_variant</td>
+      <td>211.0</td>
+      <td>590.0</td>
+      <td>6.0</td>
+      <td>22.0</td>
+      <td>0.069821</td>
+      <td>0.070138</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>2. Последствия вариантов для транскриптов TYK2</h2>
+<p>Данная таблица содержит сведения о транскриптах гена <strong>TYK2</strong>, на которые воздействуют определённые генетические варианты. Особое внимание уделено транскриптам с биотипами <em>retained_intron</em> и <em>non_coding_transcript</em>, что указывает на их принадлежность к длинным некодирующим РНК (lncRNA). Эти некодирующие транскрипты играют важную роль в регуляции экспрессии гена и могут быть вовлечены в патогенез мужского бесплодия.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>rsID</th>
+      <th>gene_id</th>
+      <th>gene_symbol</th>
+      <th>transcript_id</th>
+      <th>biotype</th>
+      <th>consequence_terms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rs12720358</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529370</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720358</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529739</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720358</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000534228</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720358</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699356</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720358</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699357</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529370</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529370</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529739</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529739</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000534228</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000534228</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699356</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699356</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699357</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720320</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699357</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529370</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529370</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529739</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529739</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000534228</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000534228</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699356</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699356</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699357</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs280497</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699357</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720307</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529370</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720307</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529739</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720307</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000534228</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720307</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699356</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720307</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699357</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720302</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529370</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720302</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000529739</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720302</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000534228</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720302</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699356</td>
+      <td>retained_intron</td>
+      <td>intron_variant, non_coding_transcript_variant</td>
+    </tr>
+    <tr>
+      <td>rs12720302</td>
+      <td>ENSG00000105397</td>
+      <td>TYK2</td>
+      <td>ENST00000699357</td>
+      <td>retained_intron</td>
+      <td>non_coding_transcript_exon_variant</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. Уровень экспрессии TYK2 в тканях</h2>
+<p>Таблица показывает уровни экспрессии гена TYK2 в различных тканях организма человека.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ткань</th>
+      <th>Уровень экспрессии</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gene ID</td>
+      <td>ENSG00000105397</td>
+    </tr>
+    <tr>
+      <td>Gene Name</td>
+      <td>TYK2</td>
+    </tr>
+    <tr>
+      <td>adrenal gland</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <td>amygdala</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td>anterior cingulate cortex</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td>aorta</td>
+      <td>34.0</td>
+    </tr>
+    <tr>
+      <td>atrium auricular region</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <td>blood</td>
+      <td>77.0</td>
+    </tr>
+    <tr>
+      <td>caudate nucleus</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>cerebellar hemisphere</td>
+      <td>45.0</td>
+    </tr>
+    <tr>
+      <td>cerebellum</td>
+      <td>50.0</td>
+    </tr>
+    <tr>
+      <td>cerebral cortex</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <td>cervical vertebra</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <td>coronary artery</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <td>cortex of kidney</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <td>ectocervix</td>
+      <td>49.0</td>
+    </tr>
+    <tr>
+      <td>endocervix</td>
+      <td>57.0</td>
+    </tr>
+    <tr>
+      <td>esophagogastric junction</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <td>esophagus mucosa</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <td>fallopian tube</td>
+      <td>52.0</td>
+    </tr>
+    <tr>
+      <td>frontal cortex</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <td>heart left ventricle</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td>hippocampus</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>hypothalamus</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <td>ileum</td>
+      <td>53.0</td>
+    </tr>
+    <tr>
+      <td>liver</td>
+      <td>23.0</td>
+    </tr>
+    <tr>
+      <td>lower leg skin</td>
+      <td>39.0</td>
+    </tr>
+    <tr>
+      <td>lung</td>
+      <td>65.0</td>
+    </tr>
+    <tr>
+      <td>mammary gland</td>
+      <td>44.0</td>
+    </tr>
+    <tr>
+      <td>minor salivary gland</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <td>muscle layer of esophagus</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <td>nucleus accumbens</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>omental fat pad</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <td>ovary</td>
+      <td>57.0</td>
+    </tr>
+    <tr>
+      <td>pancreas</td>
+      <td>20.0</td>
+    </tr>
+    <tr>
+      <td>pituitary gland</td>
+      <td>54.0</td>
+    </tr>
+    <tr>
+      <td>prostate gland</td>
+      <td>50.0</td>
+    </tr>
+    <tr>
+      <td>putamen</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>renal medulla</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <td>sigmoid colon</td>
+      <td>33.0</td>
+    </tr>
+    <tr>
+      <td>skeletal muscle tissue</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <td>skin</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <td>spleen</td>
+      <td>102.0</td>
+    </tr>
+    <tr>
+      <td>stomach</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <td>subcutaneous adipose tissue</td>
+      <td>43.0</td>
+    </tr>
+    <tr>
+      <td>substantia nigra</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>suprapubic skin</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <td>testis</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <td>thyroid gland</td>
+      <td>59.0</td>
+    </tr>
+    <tr>
+      <td>tibial artery</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <td>tibial nerve</td>
+      <td>64.0</td>
+    </tr>
+    <tr>
+      <td>transverse colon</td>
+      <td>34.0</td>
+    </tr>
+    <tr>
+      <td>urinary bladder</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <td>uterus</td>
+      <td>54.0</td>
+    </tr>
+    <tr>
+      <td>vagina</td>
+      <td>40.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. МикроРНК, взаимодействующие с TYK2</h2>
+<p>Перечень микроРНК, которые потенциально взаимодействуют с геном TYK2, включая их последовательности, положения в геноме и длины.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>miRNA Name</th>
+      <th>miRNA Sequence</th>
+      <th>miRBase ID (mature)</th>
+      <th>Similar miRNAs</th>
+      <th>Precursor Name</th>
+      <th>Genomic Location</th>
+      <th>NCBI GENE ID</th>
+      <th>miRBase ID (precursor)</th>
+      <th>Clustered miRNAs</th>
+      <th>MIM ID</th>
+      <th>Sequence Length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hsa-miR-556-3p</td>
+      <td>auauuaccauuagcucaucuuu</td>
+      <td>MIMAT0004793</td>
+      <td>None</td>
+      <td>hsa-mir-556</td>
+      <td>chr1:162342546-162342640</td>
+      <td>693141</td>
+      <td>MI0003562</td>
+      <td>None</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-6880-5p</td>
+      <td>ugguggaggaagagggcagcuc</td>
+      <td>MIMAT0027660</td>
+      <td>None</td>
+      <td>hsa-mir-6880</td>
+      <td>chr12:124337181-124337242</td>
+      <td>102466204</td>
+      <td>MI0022727</td>
+      <td>None</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4492</td>
+      <td>ggggcugggcgcgcgcc</td>
+      <td>MIMAT0019027</td>
+      <td>hsa-miR-4498, hsa-miR-5001-5p, hsa-miR-762 (sharing the same seed sequence with hsa-miR-4492).</td>
+      <td>hsa-mir-4492</td>
+      <td>chr11:118910708-118910787</td>
+      <td>100616376</td>
+      <td>MI0016854</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-506-3p</td>
+      <td>uaaggcacccuucugaguaga</td>
+      <td>MIMAT0002878</td>
+      <td>hsa-miR-124-3p (sharing the same seed sequence with hsa-miR-506-3p).</td>
+      <td>hsa-mir-506</td>
+      <td>chrX:147230720-147230843</td>
+      <td>574511</td>
+      <td>MI0003193</td>
+      <td>hsa-mir-513a-2,hsa-mir-506,hsa-mir-507,hsa-mir-508 (within 10kb in genome)</td>
+      <td>300877</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-124-3p</td>
+      <td>uaaggcacgcggugaaugccaa</td>
+      <td>MIMAT0000422</td>
+      <td>hsa-miR-506-3p (sharing the same seed sequence with hsa-miR-124-3p).</td>
+      <td>hsa-mir-124-1</td>
+      <td>chr8:9903388-9903472</td>
+      <td>406907</td>
+      <td>MI0000443</td>
+      <td>None</td>
+      <td>609327</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-762</td>
+      <td>ggggcuggggccggggccgagc</td>
+      <td>MIMAT0010313</td>
+      <td>hsa-miR-4492, hsa-miR-4498, hsa-miR-5001-5p (sharing the same seed sequence with hsa-miR-762).</td>
+      <td>hsa-mir-762</td>
+      <td>chr16:30893903-30893985</td>
+      <td>100313837</td>
+      <td>MI0003892</td>
+      <td>None</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4498</td>
+      <td>ugggcuggcagggcaagugcug</td>
+      <td>MIMAT0019033</td>
+      <td>hsa-miR-4492, hsa-miR-5001-5p, hsa-miR-762 (sharing the same seed sequence with hsa-miR-4498).</td>
+      <td>hsa-mir-4498</td>
+      <td>chr12:120155434-120155499</td>
+      <td>100616179</td>
+      <td>MI0016860</td>
+      <td>None</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4525</td>
+      <td>ggggggaugugcaugcugguu</td>
+      <td>MIMAT0019064</td>
+      <td>hsa-miR-5010-5p (sharing the same seed sequence with hsa-miR-4525).</td>
+      <td>hsa-mir-4525</td>
+      <td>chr17:82668233-82668307</td>
+      <td>100616196</td>
+      <td>MI0016892</td>
+      <td>None</td>
+      <td>None</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-5010-5p</td>
+      <td>agggggauggcagagcaaaauu</td>
+      <td>MIMAT0021043</td>
+      <td>hsa-miR-4525 (sharing the same seed sequence with hsa-miR-5010-5p).</td>
+      <td>hsa-mir-5010</td>
+      <td>chr17:42514188-42514307</td>
+      <td>100847046</td>
+      <td>MI0017878</td>
+      <td>None</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-517-5p</td>
+      <td>ccucuagauggaagcacugucu</td>
+      <td>MIMAT0002851</td>
+      <td>None</td>
+      <td>hsa-mir-517a</td>
+      <td>chr19:53712268-53712354</td>
+      <td>574479</td>
+      <td>MI0003161</td>
+      <td>hsa-mir-518b,hsa-mir-526a-1,hsa-mir-520c,hsa-mir-518c,hsa-mir-524,hsa-mir-517a,hsa-mir-519d,hsa-mir-521-2,hsa-mir-520d,hsa-mir-517b,hsa-mir-520g (within 10kb in genome)</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-637</td>
+      <td>acugggggcuuucgggcucugcgu</td>
+      <td>MIMAT0003307</td>
+      <td>None</td>
+      <td>hsa-mir-637</td>
+      <td>chr19:3961414-3961512</td>
+      <td>693222</td>
+      <td>MI0003652</td>
+      <td>None</td>
+      <td>None</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-541-3p</td>
+      <td>uggugggcacagaaucuggacu</td>
+      <td>MIMAT0004920</td>
+      <td>hsa-miR-654-5p (sharing the same seed sequence with hsa-miR-541-3p).</td>
+      <td>hsa-mir-541</td>
+      <td>chr14:101064495-101064578</td>
+      <td>100126308</td>
+      <td>MI0005539</td>
+      <td>hsa-mir-134,hsa-mir-668,hsa-mir-485,hsa-mir-323b,hsa-mir-154,hsa-mir-496,hsa-mir-377,hsa-mir-541,hsa-mir-409,hsa-mir-412,hsa-mir-369,hsa-mir-410,hsa-mir-656 (within 10kb in genome)</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-654-5p</td>
+      <td>uggugggccgcagaacaugugc</td>
+      <td>MIMAT0003330</td>
+      <td>hsa-miR-541-3p (sharing the same seed sequence with hsa-miR-654-5p).</td>
+      <td>hsa-mir-654</td>
+      <td>chr14:101040219-101040299</td>
+      <td>724024</td>
+      <td>MI0003676</td>
+      <td>hsa-mir-543,hsa-mir-495,hsa-mir-376c,hsa-mir-376a-2,hsa-mir-654,hsa-mir-376b,hsa-mir-376a-1,hsa-mir-300,hsa-mir-1185-1,hsa-mir-1185-2,hsa-mir-381,hsa-mir-487b,hsa-mir-539,hsa-mir-889,hsa-mir-544a,hsa-mir-655 (within 10kb in genome)</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4793-5p</td>
+      <td>acauccugcuccacagggcagagg</td>
+      <td>MIMAT0019965</td>
+      <td>None</td>
+      <td>hsa-mir-4793</td>
+      <td>chr3:48644194-48644280</td>
+      <td>100616112</td>
+      <td>MI0017440</td>
+      <td>None</td>
+      <td>None</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4524b-3p</td>
+      <td>gagacagguucaugcugcua</td>
+      <td>MIMAT0022256</td>
+      <td>None</td>
+      <td>hsa-mir-4524b</td>
+      <td>chr17:69099542-69099656</td>
+      <td>100847008</td>
+      <td>MI0019114</td>
+      <td>hsa-mir-4524b,hsa-mir-4524a (within 10kb in genome)</td>
+      <td>None</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-6081</td>
+      <td>aggagcagugccggccaaggcgcc</td>
+      <td>MIMAT0023706</td>
+      <td>None</td>
+      <td>hsa-mir-6081</td>
+      <td>chr9:95065350-95065446</td>
+      <td>102466518</td>
+      <td>MI0020358</td>
+      <td>None</td>
+      <td>None</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-8071</td>
+      <td>cgguggacuggagugggugg</td>
+      <td>MIMAT0030998</td>
+      <td>None</td>
+      <td>hsa-mir-8071-1</td>
+      <td>chr14:105621116-105621180</td>
+      <td>102465871</td>
+      <td>MI0025907</td>
+      <td>None</td>
+      <td>None</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4430</td>
+      <td>aggcuggagugagcggag</td>
+      <td>MIMAT0018945</td>
+      <td>hsa-miR-3652 (sharing the same seed sequence with hsa-miR-4430).</td>
+      <td>hsa-mir-4430</td>
+      <td>chr2:33418516-33418564</td>
+      <td>100616136</td>
+      <td>MI0016769</td>
+      <td>None</td>
+      <td>None</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-3675-5p</td>
+      <td>uauggggcuucuguagagauuuc</td>
+      <td>MIMAT0018098</td>
+      <td>None</td>
+      <td>hsa-mir-3675</td>
+      <td>chr1:16858949-16859021</td>
+      <td>100500876</td>
+      <td>MI0016076</td>
+      <td>None</td>
+      <td>None</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-6079</td>
+      <td>uuggaagcuuggaccaacuagcug</td>
+      <td>MIMAT0023704</td>
+      <td>None</td>
+      <td>hsa-mir-6079</td>
+      <td>chr1:43838622-43838683</td>
+      <td>102464830</td>
+      <td>MI0020356</td>
+      <td>None</td>
+      <td>None</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4270</td>
+      <td>ucagggagucaggggagggc</td>
+      <td>MIMAT0016900</td>
+      <td>hsa-miR-4441, hsa-miR-6754-5p (sharing the same seed sequence with hsa-miR-4270).</td>
+      <td>hsa-mir-4270</td>
+      <td>chr3:15496239-15496308</td>
+      <td>100422868</td>
+      <td>MI0015878</td>
+      <td>None</td>
+      <td>None</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-2861</td>
+      <td>ggggccuggcggugggcgg</td>
+      <td>MIMAT0013802</td>
+      <td>None</td>
+      <td>hsa-mir-2861</td>
+      <td>chr9:127785918-127786007</td>
+      <td>100422910</td>
+      <td>MI0013006</td>
+      <td>hsa-mir-3960,hsa-mir-2861 (within 10kb in genome)</td>
+      <td>613405</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-92a-2-5p</td>
+      <td>ggguggggauuuguugcauuac</td>
+      <td>MIMAT0004508</td>
+      <td>None</td>
+      <td>hsa-mir-92a-2</td>
+      <td>chrX:134169538-134169612</td>
+      <td>407049</td>
+      <td>MI0000094</td>
+      <td>hsa-mir-363,hsa-mir-92a-2,hsa-mir-19b-2,hsa-mir-20b,hsa-mir-18b,hsa-mir-106a (within 10kb in genome)</td>
+      <td>None</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>hsa-miR-4441</td>
+      <td>acagggaggagauugua</td>
+      <td>MIMAT0018959</td>
+      <td>hsa-miR-4270, hsa-miR-6754-5p (sharing the same seed sequence with hsa-miR-4441).</td>
+      <td>hsa-mir-4441</td>
+      <td>chr2:239085827-239085926</td>
+      <td>100616493</td>
+      <td>MI0016784</td>
+      <td>None</td>
+      <td>None</td>
+      <td>17</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
